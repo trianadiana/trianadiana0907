@@ -1,15 +1,15 @@
 #[contract]
-mod HeyStarknet {
+mod What's upStarknet {
     use starknet::get_caller_address;
     use starknet::ContractAddress;
 
 
     #[event]
-    fn Hey(from: ContractAddress, value: felt252) {}
+    fn What's up(from: ContractAddress, value: felt252) {}
 
 
     #[external]
-    fn Hey(message: felt252) {
+    fn What's up(message: felt252) {
         let caller = get_caller_address();
         Hello(caller, message);
     }
