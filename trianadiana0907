@@ -1,15 +1,15 @@
 #[contract]
-mod HowdyStarknet {
+mod wasdStarknet {
     use starknet::get_caller_address;
     use starknet::ContractAddress;
 
 
     #[event]
-    fn Howdy(from: ContractAddress, value: felt252) {}
+    fn wasd(from: ContractAddress, value: felt252) {}
 
 
     #[external]
-    fn Howdy(message: felt252) {
+    fn wasd(message: felt252) {
         let caller = get_caller_address();
         Hello(caller, message);
     }
